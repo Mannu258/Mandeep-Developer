@@ -12,44 +12,21 @@
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
 
-<div class="card p-4 shadow" style="width:400px">
+<div class="card p-4 shadow text-center" style="width:400px">
 
-<h4 class="text-center mb-3">Pay with UPI</h4>
+<h4 class="mb-3">Pay ₹1 with UPI</h4>
 
-<div class="mb-3">
-<label class="form-label">Amount</label>
-<input type="number" id="amount" class="form-control" placeholder="Enter Amount">
-</div>
-
-<a id="paybtn" class="btn btn-primary w-100">
-Pay with UPI
+<a class="btn btn-primary w-100"
+href="upi://pay?pa=mishra.mandeep@ptyes&pn=Mandeep%20Mishra&am=1&cu=INR">
+Pay ₹1 Now
 </a>
 
-<p class="text-center text-muted mt-3 small">
+<p class="text-muted mt-3 small">
 Supports all UPI apps
 </p>
 
 </div>
 </div>
-
-<script>
-
-document.getElementById("paybtn").onclick = function(){
-
-let amount = document.getElementById("amount").value;
-
-if(!amount){
-alert("Enter amount");
-return false;
-}
-
-let upiLink = "upi://pay?pa=mishra.mandeep@ptyes&pn=Mandeep%20Mishra&am="+amount+"&cu=INR";
-
-this.href = upiLink;
-
-};
-
-</script>
 
 </body>
 </html>
